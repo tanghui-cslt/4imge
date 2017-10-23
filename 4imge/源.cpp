@@ -126,8 +126,8 @@ void Circle()
 void image3()
 {
 	glViewport(0, 200, 200, 200);
-	
-	Circle();
+	glutWireSphere(0.5, 10, 10);
+	//Circle();
 }
 
 void image4()
@@ -140,7 +140,7 @@ void image4()
 
 	// 通过设置视景体，而修改当前的投影矩阵。  
 	glViewport(200, 200, 200, 200);
-
+	//glutSolidSphere(0.5,100,100);
 	glColor3f(0.5f, 1.0f, 0.0f);
 	glBegin(GL_QUAD_STRIP);//连续填充四边形串  
 	int i = 0;
@@ -202,6 +202,7 @@ void myDisplay()
 	image2();
 	image3();
 	image4();
+
 	glFlush();
 }
 int main(int argc, char *argv[])
